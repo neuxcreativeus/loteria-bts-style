@@ -16,7 +16,7 @@
       scaleApp();
 
       const imageUrls = [
-        "images/Arirang-logo.webp", "images/Arirang-logo1.webp", "images/Arirang-logo2.webp", "images/Arirang-logo3.webp", "images/el-beso.webp", "images/el-capitan.webp", "images/el-conejo.webp", "images/el-conejo.webp", "images/el-corazon.webp", "images/el-elote.webp", "images/el-mesero.webp", "images/el-pirata.webp", "images/el-rey.webp", "images/el-sol.webp", "images/el-soldado.webp", "images/el-super-atun.webp", "images/el-velero.webp", "images/el-violin.webp", "images/la-amistad.webp", "images/la-bandera.webp", "images/la-corona.webp", "images/la-luna.webp", "images/la-mascara.webp", "images/la-piramide.webp", "images/los-churros.webp", "images/los-jarritos.webp", "images/los-marineros.webp", "images/los-tacos.webp", "images/los-tambores.webp"
+        ".images/Arirang-logo.webp", ".images/Arirang-logo1.webp", ".images/Arirang-logo2.webp", ".images/Arirang-logo3.webp", ".images/el-beso.webp", ".images/el-capitan.webp", ".images/el-conejo.webp", ".images/el-conejo.webp", ".images/el-corazon.webp", ".images/el-elote.webp", ".images/el-mesero.webp", ".images/el-pirata.webp", ".images/el-rey.webp", ".images/el-sol.webp", ".images/el-soldado.webp", ".images/el-super-atun.webp", ".images/el-velero.webp", ".images/el-violin.webp", ".images/la-amistad.webp", ".images/la-bandera.webp", ".images/la-corona.webp", ".images/la-luna.webp", ".images/la-mascara.webp", ".images/la-piramide.webp", ".images/los-churros.webp", ".images/los-jarritos.webp", ".images/los-marineros.webp", ".images/los-tacos.webp", ".images/los-tambores.webp"
       ];
 
       function preloadImages() {
