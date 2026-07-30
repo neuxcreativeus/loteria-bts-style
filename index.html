@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:,">
+    <title>BTS Arirang World Tour Loteria</title>
+    <link rel="BTS Loteria Stylesheet" href="BTS-Loteria-game.css">
+  </head>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div>
+          <h1>BTS Arirang World Tour 2026 Loteria Game</h1>
+          <h2>Welcome! Thank you for getting one of our freebies as a way to remember this moment you shared with fellow ARMY and BTS!</h2>
+          <h2> Let's play some Loteria! </h2>
+
+          <p class="subtitle">Create a lobby, invite friends, and play together across many devices. The host draws cards and players click on the corresponding cards when called to add chips to their board.</p>
+          <p class="subtitle">First to fill their entire board in Arirang chips wins!</p>
+        </div>
+      </div>
+
+      <div class="panel lobby-panel" id="setupPanel">
+        <div class="lobby-form">
+          <h2>Create or join a room</h2>
+          <div class="input-row">
+            <input id="playerNameInput" maxlength="24" placeholder="Your Name" />
+            <button class="primary" id="hostCreateBtn">Create Lobby</button>
+          </div>
+          <div class="input-row">
+            <input id="lobbyCodeInput" maxlength="8" placeholder="Enter Lobby Code" />
+            <button class="secondary" id="joinLobbyBtn">Join Lobby</button>
+          </div>
+          <div class="setup-message" id="setupMessage"></div>
+        </div>
+      </div>
+      <div class="panel" id="gamePanel" hidden>
+        <div class="mobile-top-row">
+          <div class="lobby-code" id="lobbyCodeBadge"></div>
+          <div class="mobile-actions">
+            <button class="primary" id="startGameBtn">Start new game</button>
+            <button class="secondary" id="quitBtn">Quit lobby</button>
+          </div>
+        </div>
+<!--Main Body Panel-->
+          <div class="status-bar">
+            <div class="status" id="status">Waiting for the host to start the game.</div>
+          </div>
+          <div id="winnerBanner" class="winner-banner" hidden></div>
+          <div class="player-strip" id="playerStrip"></div>
+          <div class="layout">
+            <div class="board" id="board"></div>
+<!--Call and Deck Table-->
+            <div class="side-panel">
+            <div class="call-table" id="activeCard">
+              <div class="flip-card">
+                <div class="flip-card-inner" id="flipCardInner">
+                  <div class="flip-card-face flip-card-face--back">
+                    <div class="back-title">BTS Loteria</div>
+                  </div>
+                  <div class="flip-card-face flip-card-face--front" id="activeCardContainer"></div>
+                </div>
+              </div>
+              <div class="draw-button-wrap">
+                <button class="primary draw-button" id="drawBtn">Draw a Card</button>
+                <div class="status" id="deckCount" hidden>24 Cards Left</div>
+                <div class="deck-stack" aria-label="Deck">
+                  <div class="deck-card deck-card--1"></div>
+                  <div class="deck-card deck-card--2"></div>
+                  <div class="deck-card deck-card--3"></div>
+                  <div class="deck-card deck-card--4"></div>
+                  <div class="deck-card deck-card--top" id="deckTop"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recent-calls-panel" id="recentCalls" hidden>
+      <h3 style="margin-top:0;">Recent calls</h3>
+        <div class="called-list" id="calledList"></div>
+    </div>
+    <p>Disclaimer: This is a non-commercial, non-profit, fan-made game created strictly for entertainment purposes under the Fair Use guidelines. This project is <u><b>not affiliated with, authorized, maintained, sponsored, or endorsed by BTS, BIGHIT MUSIC, HYBE, or any of their affiliates</b></u>.All official logos, images, names, and audio tracks are the intellectual property of BIGHIT MUSIC/HYBE.</p>
+    <h3>Media Credits</h3>
+      <p><b>Official Media:</b> All official BTS imagery used under fair use/fan-art guidelines belong entirely to HYBE Co., Ltd.</p>     
+      <p>Images used in this project consist of publicly distributed internet memes and fan-art sourced via search engines. Every effort is made to celebrate internet culture; howerver, individual original creators of specific meme variations are often anonymous or untraceable. All underlying copyrights, characters, and media assets belong strictly to their respective creators and studios. If you are a creator of an asset used here and wish to be credited or have it removed, please email me directly at <u>psychneux@gmail.com</u> </p>
+      <P><b>Credited Fan-Made Assets:</b> </P>
+      <!-- Insert credited assets here -->
+      <p></p>
+    </div>
+<!--Confetti Time!-->
+    <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+    <script src="https://unpkg.com/peerjs@1.5.1/dist/peerjs.min.js"></script>
+    <script src="BTS-Loteria-game.js"></script>
+  </body>
+</html>
