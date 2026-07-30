@@ -683,10 +683,24 @@
 
 /* Mobile Mode */
       @media (max-width: 1200px), (max-height: 1000px) {
+        .app {
+          max-width: 100% !important;
+          margin: 0 !important;
+          padding: 15px !important;
+          box-sizing: border-box;
+          transform: none;
+        }
+        
         .app, .panel {
           width: 100% !important;
           transform: none;
           transform-origin: top left;
+        }
+
+        .panel {
+          width: 100% !important;
+          max-width: none !important;
+          box-sizing: border-box;
         }
 
         .input-row input,
