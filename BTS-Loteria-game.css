@@ -891,192 +891,33 @@
 
       }
 
-      @media (max-width 768px) {
-
-        .layout {
-          display: flex !important;
-          flex-direction: column !important;
-          width: 100% !important;
-          gap: 15px !important;
-          height: auto !important;
-          max-height: none !important;
-        }
-
-        #gamePanel {
-          display: flex;
-          flex-direction: column;
-          overflow: visible;
-          height: auto;
-          max-height: none;
-          gap: 20px;
-          padding: 10px;
-          box-sizing: border-box;
-          justify-content: space-between;
-        }
+      @media (max-width: 768px) {
 
         #gamePanel .layout {
-          flex: 1 0 auto;
           display: flex;
           flex-direction: column;
-          align-items: center;
-          height: auto;
-          gap: 15px;
         }
 
+        /* Force call table items to line up horizontally and scale down */
         .side-panel {
-          order: -1 !important;
-          width: 100% !important;
-          height: auto !important;
-          max-height: none !important;
-          max-width: 100%;
-        }
-
-        .call-table {
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-items: flex-start;
-          justify-content: space-evenly;
-          width: 100%;
-          height: min(15vw, 15vh);
-        }
-
-        .call-table > * {
-          flex: 1 1 200px;
-        }
-
-/*Board & Tiles */
-        .board {
-          flex: 1;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          aspect-ratio: 1 / 1;
-          gap: 4px;
-          flex-basis: auto;
-          width: min(90vw, 60vh) !important;
-          min-height: 0;
-          margin: 0 auto !important;
-          flex-shrink: 0 !important;
-        }
-
-        .tile {
-          position: relative !important;
-          border-radius: 10px !important;
-          background: none !important;
-          border: none !important;
-          padding: 0 !important;
-          height: auto !important;
-        }
-
-        .tile-image-container {
-          position: relative;
-          overflow: visible;
-        }
-
-        .tile-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          cursor: pointer;
-        }
-
-
-        .tile-chip {
-          position: absolute !important;
-          top: 50% !important;
-          left: 50% !important;
-          transform: translate(-50%, -50%) scale(0.5);
-          margin: 0;
-          width: 35% !important;
-          aspect-ratio: 1 / 1;
-          height: auto !important;
-          z-index: 1000 !important;
-          animation: chipDropFixed 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-          visibility: visible !important;
           display: flex !important;
-        }
-
-        .tile img {
+          flex-direction: row !important;
           width: 100% !important;
-          height: 100% !important;
-          aspect-ratio: 1 / 1 !important;
-          object-fit: cover !important;
-          display: block;
-          border: 4px solid rgba(255, 255, 255, 0.3);
-          border-radius: 10px;
-        }
-
-        .tile-filled {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        #activeCard {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          gap: 15px;
-          height: auto;
-          min-height: 100px;
+          max-width: 100% !important;
+          gap: 8px;
           padding: 10px;
-          overflow: visible;
+          height: 200px;
         }
 
-        .flip-card {
-          margin: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transform: scale(0.5);
-        }
-
-        .draw-button-wrap {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0;
-        }
-
-        .deck-stack {
-          margin-bottom: 15px;
-          transform: scale(0.5);
-          transform-origin: center;
-        }
-
-        @keyframes chipDropFixed {
-          0% {
-            transform: scale(0.5);
-          }
-
-        }
-
-        #setupPanel {
-          width: 95%;
-          max-width: 500px;
-          margin: 0 auto;
-        }
-
-        input, button {
-          min-height: 44px;
-          font-size: 16px;
-          padding: 10px 15px;
-        }
-
-        #recentCalls {
-          width: auto;
-          box-sizing: border-box;
-          margin: 0;
-          padding: 15px;
-          display: block;
+        /* Scale the items/cards INSIDE the call table container */
+        .side-panel > * {
+          flex: 0 0 80px !important;      
+          height: 100px !important;       
+          min-width: 200px !important;
+          border-radius: 6px;
         }
       }
+
 
       [hidden] {
         display: none !important;
