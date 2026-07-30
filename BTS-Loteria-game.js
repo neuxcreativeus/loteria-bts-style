@@ -16,7 +16,7 @@
       scaleApp();
 
       const imageUrls = [
-        ".images/Arirang-logo.webp", ".images/Arirang-logo1.webp", ".images/Arirang-logo2.webp", ".images/Arirang-logo3.webp", ".images/el-beso.webp", ".images/el-capitan.webp", ".images/el-conejo.webp", ".images/el-conejo.webp", ".images/el-corazon.webp", ".images/el-elote.webp", ".images/el-mesero.webp", ".images/el-pirata.webp", ".images/el-rey.webp", ".images/el-sol.webp", ".images/el-soldado.webp", ".images/el-super-atun.webp", ".images/el-velero.webp", ".images/el-violin.webp", ".images/la-amistad.webp", ".images/la-bandera.webp", ".images/la-corona.webp", ".images/la-luna.webp", ".images/la-mascara.webp", ".images/la-piramide.webp", ".images/los-churros.webp", ".images/los-jarritos.webp", ".images/los-marineros.webp", ".images/los-tacos.webp", ".images/los-tambores.webp"
+        "images/Arirang-logo.webp", "images/Arirang-logo1.webp", "images/Arirang-logo2.webp", "images/Arirang-logo3.webp", "images/el-beso.webp", "images/el-capitan.webp", "images/el-conejo.webp", "images/el-corazon.webp", "images/el-elote.webp", "images/el-mesero.webp", "images/el-pirata.webp", "images/el-rey.webp", "images/el-sol.webp", "images/el-soldado.webp", "images/el-super-atun.webp", "images/el-velero.webp", "images/el-violin.webp", "images/la-amistad.webp", "images/la-bandera.webp", "images/la-corona.webp", "images/la-luna.webp", "images/la-mascara.webp", "images/la-piramide.webp", "images/los-churros.webp", "images/los-jarritos.webp", "images/los-marineros.webp", "images/los-tacos.webp", "images/los-tambores.webp"
       ];
 
       function preloadImages() {
@@ -29,45 +29,45 @@
       window.addEventListener('load', preloadImages);
 
       //Add Audio here
-      const joinLobbySound = new Audio(".audio/join-lobby.mp3");
-      const quitLobbySound = new Audio(".audio/quit-lobby.wav");
-      const startSound = new Audio(".audio/game-start.mp3");
-      const chipSound = new Audio(".audio/coin-toss1.wav");
+      const joinLobbySound = new Audio("audio/join-lobby.mp3");
+      const quitLobbySound = new Audio("audio/quit-lobby.wav");
+      const startSound = new Audio("audio/game-start.mp3");
+      const chipSound = new Audio("audio/coin-toss1.wav");
       const cardSounds = [
-        new Audio(".audio/card-draw.mp3"),
-        new Audio(".audio/card-draw2.mp3"),
-        new Audio(".audio/card-draw3.mp3")
+        new Audio("audio/card-draw.mp3"),
+        new Audio("audio/card-draw2.mp3"),
+        new Audio("audio/card-draw3.mp3")
       ];
-      const winnerSound = new Audio('.audio/winner.mp3');
+      const winnerSound = new Audio('audio/winner.mp3');
       winnerSound.volume = 0.5;
-      const confettiSound = new Audio(".audio/confetti-cheers.mp3");
+      const confettiSound = new Audio("audio/confetti-cheers.mp3");
       confettiSound.volume = 0.3;
 
       const deck = [
-        { title: "El Beso", img: ".images/el-beso.webp", subtitle: "The Kiss", accent: "#ff5fa2" },
-        { title: "El Capitán", img: ".images/el-capitan.webp", subtitle: "The Captain", accent: "#7c4dff" },
-        { title: "El Súper Atún", img: ".images/el-super-atun.webp", subtitle: "The Super Tuna", accent: "#ff7b2c" },
-        { title: "El Conejo", img: ".images/el-conejo.webp", subtitle: "The Bunny", accent: "#00c7ff" },
-        { title: "El Corazón", img: ".images/el-corazon.webp", subtitle: "The Heart", accent: "#7a3cff" },
-        { title: "El Elote", img: ".images/el-elote.webp", subtitle: "The Corn", accent: "#ff4d6d" },
-        { title: "El Mesero", img: ".images/el-mesero.webp", subtitle: "The Server", accent: "#16a085" },
-        { title: "La Luna", img: ".images/la-luna.webp", subtitle: "The Moon", accent: "#f4b942" },
-        { title: "El Pirata", img: ".images/el-pirata.webp", subtitle: "The Pirate", accent: "#ff8fab" },
-        { title: "El Rey", img: ".images/el-rey.webp", subtitle: "The King", accent: "#4cc9f0" },
-        { title: "El Sol", img: ".images/el-sol.webp", subtitle: "The Sun", accent: "#f06292" },
-        { title: "El Soldado", img: ".images/el-soldado.webp", subtitle: "The Soldier", accent: "#8e24aa" },
-        { title: "El Velero", img: ".images/el-velero.webp", subtitle: "The Sail", accent: "#ff6b6b" },
-        { title: "El Violín", img: ".images/el-violin.webp", subtitle: "The Violin", accent: "#4caf50" },
-        { title: "La Amistad", img: ".images/la-amistad.webp", subtitle: "The Friendship", accent: "#ff8f00" },
-        { title: "La Bandera", img: ".images/la-bandera.webp", subtitle: "The Flag", accent: "#ec4899" },
-        { title: "La Corona", img: ".images/la-corona.webp", subtitle: "The Crown", accent: "#3b82f6" },
-        { title: "La Máscara", img: ".images/la-mascara.webp", subtitle: "The Mask", accent: "#14b8a6" },
-        { title: "La Pirámide", img: ".images/la-piramide.webp", subtitle: "The Pyramid", accent: "#f472b6" },
-        { title: "Los Churros", img: ".images/los-churros.webp", subtitle: "The Churros", accent: "#22c55e" },
-        { title: "Los Jarritos", img: ".images/los-jarritos.webp", subtitle: "The Jarritos", accent: "#0f172a" },
-        { title: "Los Marineros", img: ".images/los-marineros.webp", subtitle: "The Sailors", accent: "#a855f7" },
-        { title: "Los Tacos", img: ".images/los-tacos.webp", subtitle: "The Tacos", accent: "#f59e0b" },
-        { title: "Los Tambores", img: ".images/los-tambores.webp", subtitle: "The Drums", accent: "#38bdf8" }
+        { title: "El Beso", img: "images/el-beso.webp", subtitle: "The Kiss", accent: "#ff5fa2" },
+        { title: "El Capitán", img: "images/el-capitan.webp", subtitle: "The Captain", accent: "#7c4dff" },
+        { title: "El Súper Atún", img: "images/el-super-atun.webp", subtitle: "The Super Tuna", accent: "#ff7b2c" },
+        { title: "El Conejo", img: "images/el-conejo.webp", subtitle: "The Bunny", accent: "#00c7ff" },
+        { title: "El Corazón", img: "images/el-corazon.webp", subtitle: "The Heart", accent: "#7a3cff" },
+        { title: "El Elote", img: "images/el-elote.webp", subtitle: "The Corn", accent: "#ff4d6d" },
+        { title: "El Mesero", img: "images/el-mesero.webp", subtitle: "The Server", accent: "#16a085" },
+        { title: "La Luna", img: "images/la-luna.webp", subtitle: "The Moon", accent: "#f4b942" },
+        { title: "El Pirata", img: "images/el-pirata.webp", subtitle: "The Pirate", accent: "#ff8fab" },
+        { title: "El Rey", img: "images/el-rey.webp", subtitle: "The King", accent: "#4cc9f0" },
+        { title: "El Sol", img: "images/el-sol.webp", subtitle: "The Sun", accent: "#f06292" },
+        { title: "El Soldado", img: "images/el-soldado.webp", subtitle: "The Soldier", accent: "#8e24aa" },
+        { title: "El Velero", img: "images/el-velero.webp", subtitle: "The Sail", accent: "#ff6b6b" },
+        { title: "El Violín", img: "images/el-violin.webp", subtitle: "The Violin", accent: "#4caf50" },
+        { title: "La Amistad", img: "images/la-amistad.webp", subtitle: "The Friendship", accent: "#ff8f00" },
+        { title: "La Bandera", img: "images/la-bandera.webp", subtitle: "The Flag", accent: "#ec4899" },
+        { title: "La Corona", img: "images/la-corona.webp", subtitle: "The Crown", accent: "#3b82f6" },
+        { title: "La Máscara", img: "images/la-mascara.webp", subtitle: "The Mask", accent: "#14b8a6" },
+        { title: "La Pirámide", img: "images/la-piramide.webp", subtitle: "The Pyramid", accent: "#f472b6" },
+        { title: "Los Churros", img: "images/los-churros.webp", subtitle: "The Churros", accent: "#22c55e" },
+        { title: "Los Jarritos", img: "images/los-jarritos.webp", subtitle: "The Jarritos", accent: "#0f172a" },
+        { title: "Los Marineros", img: "images/los-marineros.webp", subtitle: "The Sailors", accent: "#a855f7" },
+        { title: "Los Tacos", img: "images/los-tacos.webp", subtitle: "The Tacos", accent: "#f59e0b" },
+        { title: "Los Tambores", img: "images/los-tambores.webp", subtitle: "The Drums", accent: "#38bdf8" }
       ];
 /* Hidden for now, but if we can get audio for each card, this will go live.
 
