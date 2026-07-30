@@ -989,7 +989,7 @@
           position: absolute !important;
           top: 50% !important;
           left: 50% !important;
-          transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.5);
           margin: 0;
           width: 35% !important;
           aspect-ratio: 1 / 1;
@@ -1024,7 +1024,7 @@
           justify-content: center;
           gap: 15px;
           height: auto;
-          min-height: 200px;
+          min-height: 150px;
           padding: 10px;
           overflow: visible;
         }
@@ -1034,7 +1034,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          transform: scale(0.9);
+          transform: scale(0.5);
         }
 
         .draw-button-wrap {
@@ -1046,7 +1046,7 @@
 
         .deck-stack {
           margin-bottom: 15px;
-          transform: scale(0.9);
+          transform: scale(0.5);
           transform-origin: center;
         }
 
