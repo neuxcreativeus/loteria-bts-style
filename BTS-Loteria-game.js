@@ -4,11 +4,14 @@
         const targetWidth = 1450;
         const windowWidth = window.innerWidth;
 
-        const scale = Math.min(windowWidth / targetWidth, 1);
-        
-        app.style.transform = `scale(${scale})`;
-        
-        document.body.style.height = (app.offsetHeight * scale) + 'px';
+        if (windowWidth > 768) {
+          const scale = Math.min(windowWidth / targetWidth, 1);
+          app.style.transform = `scale(${scale})`;
+          document.body.style.height = (app.offsetHeight * scale) + 'px';
+        } else {
+          app.style.transform = 'none';
+          document.body.style.height = 'auto';
+        }
       }
 
       window.addEventListener('resize', scaleApp);

@@ -684,7 +684,9 @@
 /* Mobile Mode */
       @media (max-width: 1200px), (max-height: 1000px) {
         .app, .panel {
-          width: 95% !important;
+          width: 100% !important;
+          transform: none;
+          transform-origin: top left;
         }
 
         .input-row input,
