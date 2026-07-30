@@ -937,7 +937,7 @@
           align-items: flex-start;
           justify-content: space-evenly;
           width: 100%;
-          height: min(25vw, 25vh);
+          height: min(15vw, 15vh);
         }
 
         .call-table > * {
@@ -1024,7 +1024,7 @@
           justify-content: center;
           gap: 15px;
           height: auto;
-          min-height: 150px;
+          min-height: 100px;
           padding: 10px;
           overflow: visible;
         }
