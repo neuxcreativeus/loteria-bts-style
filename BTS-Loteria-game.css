@@ -682,6 +682,15 @@
 
 /* Mobile Mode */
       @media (max-width: 1200px), (max-height: 1000px) {
+        .app, .panel {
+          width: 95% !important;
+        }
+
+        .input-row input,
+        .input-row button {
+          min-height: 48px;
+          font-size: 16px;
+        }
 
         .layout {
           display: flex !important;
@@ -726,7 +735,7 @@
           flex-wrap: wrap;
           align-items: flex-start;
           justify-content: space-evenly;
-          width: min(90vw, 80vh);
+          width: min(85vw, 100vh);
           height: min(45vw, 45vh);
         }
 
@@ -845,6 +854,22 @@
             transform: scale(0.5);
           }
 
+        }
+
+        #setupPanel {
+          width: 95%;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+
+        input, button {
+          min-height: 44px;
+          font-size: 16px;
+          padding: 10px 15px;
+        }
+
+        .recent-calls-panel {
+          width: min(88vw, 100vh);
         }
 
       }
