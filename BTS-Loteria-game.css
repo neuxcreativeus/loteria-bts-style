@@ -737,6 +737,8 @@
           align-items: center;
           height: auto;
           gap: 15px;
+          justify-content: center;
+          margin: 0 auto;
         }
 
         .side-panel {
@@ -745,6 +747,7 @@
           height: auto !important;
           max-height: none !important;
           max-width: 100%;
+          justify-content: center;
         }
 
         .call-table {
@@ -754,6 +757,7 @@
           justify-content: space-evenly;
           width: min(85vw, 100vh);
           height: min(45vw, 45vh);
+          justify-content: center;
         }
 
         .call-table > * {
@@ -893,9 +897,14 @@
 
       @media screen and (max-width: 430px) {
 
+        #gamePanel .layout {
+          justify-content: center;
+          margin: 0 auto;
+        }
+
         .side-panel {
           display: block !important;
-          justify-content: left !important;
+          justify-content: center !important;
           align-items: flex-start !important;
           gap: 10px !important;
           width: 100% !important;
@@ -952,16 +961,23 @@
           transform: translate(-50%, -50%) !important;
         }
       }
-                  @media screen and (max-width: 390px) {
 
+      @media screen and (max-width: 390px) {
+
+        #gamePanel .layout {
+          justify-content: center;
+          margin: 0 auto;
+        }
+        
         .side-panel {
           display: block !important;
-          justify-content: left !important;
+          justify-content: center !important;
           align-items: flex-start !important;
           gap: 10px !important;
           width: 100% !important;
           max-width: 100% !important;
           padding: 10px 0 !important;
+          justify-content: center;
         }
 
         .call-table {
